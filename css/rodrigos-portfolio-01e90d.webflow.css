@@ -73,7 +73,7 @@ p {
   right: 0%;
   bottom: 0%;
   z-index: 0;
-  overflow: visible;
+  overflow: hidden;
   background-color: #d8d5d1;
   background-image: url('../images/backgorund_green_Gaussian-Blur.svg');
   background-position: 50% 80%;
