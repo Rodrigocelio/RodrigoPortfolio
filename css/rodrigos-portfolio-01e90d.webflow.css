@@ -1377,6 +1377,8 @@ p {
 
   .html-embed {
     overflow: visible;
+    width: fit-content;
+    margin-left: 36px;
   }
 
   .wrapper {
