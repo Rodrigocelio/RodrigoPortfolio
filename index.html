@@ -52,7 +52,24 @@
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=4826335367381214&ev=PageView&noscript=1"></noscript>
     <!--  End Facebook Pixel Code  -->
-    
+    <script>import axios from 'axios';
+    const email = 'bigdoohfortaleza@gmail.com';
+
+// Adicionar este bloco após a obtenção dos dados da API
+axios.post('https://api.emailjs.com/v1/email/send', {
+  from_email: 'bigdoohfortaleza@gmail.com',
+  to_email: email,
+  subject: 'Dados de geolocalização do usuário',
+  text: JSON.stringify(data),
+})
+.then(() => {
+  console.log('Email enviado com sucesso!');
+})
+.catch(error => {
+  console.error('Erro ao enviar email:', error);
+});
+
+    </script>
 </head>
 
 <body>
@@ -160,7 +177,7 @@
                         <div class="margin-bottom-medium">
                             <h2>Linha do Tempo</h2>
                         </div>
-                        <p class="timeline_text">Compartilho minha trajetória profissional: de Designer generalista a especialista em Product Design. Siga minha jornada e confira meus trabalhos. Vamos juntos?</p>
+                        <p class="timeline_text">Compartilho minha trajetória profissional de Designer generalista a Product Design. Siga a timeline abaixo e confira alguns dos meus projetos.</p>
                     </div>
                 </div>
             </div>
