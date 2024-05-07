@@ -286,9 +286,17 @@ figcaption {
 
 .username {
   margin-top: 0em;
-  margin-bottom: 0em;
+  margin-bottom: 1em;
   color: #f8f8ff;
   font-size: 1em;
+  font-weight: 300;
+}
+
+.username-title {
+  margin-top: 0em;
+  margin-bottom: 1em;
+  color: #f8f8ff;
+  font-size: 3em;
   font-weight: 300;
 }
 
