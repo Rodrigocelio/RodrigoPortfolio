@@ -3304,8 +3304,9 @@ figcaption {
 
 .text-500-titles {
   font-size: 64px;
-  font-weight: 400;
-  line-height: 1.167em;
+  font-weight: 600;
+  line-height: 1em;
+  
 }
 
 .text-500.bold {
@@ -6185,7 +6186,7 @@ figcaption {
   }
 
   .mg-bottom-24px {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .mg-top-48px {
