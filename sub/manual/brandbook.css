@@ -2365,6 +2365,10 @@ figcaption {
   background-color: rgba(0, 0, 0, .25);
 }
 
+.card.component-card.bg-black-5 {
+  background-color: rgba(0, 0, 0, .05);
+}
+
 .card.pd-32px---24px {
   padding: 32px 24px;
 }
