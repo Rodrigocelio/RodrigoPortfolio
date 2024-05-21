@@ -4878,7 +4878,7 @@ figcaption {
 
 .primary-color {
   grid-column-gap: 8px;
-  background-color: #ecd99b;
+  background-color: #02579A;
   border-radius: 10px;
   justify-content: center;
   align-items: flex-start;
@@ -4903,7 +4903,7 @@ figcaption {
 
 .secondary-color {
   grid-column-gap: 8px;
-  background-color: #d3902d;
+  background-color: #21B0FE;
   border-radius: 10px;
   justify-content: center;
   align-items: flex-start;
@@ -4928,7 +4928,7 @@ figcaption {
 
 .secondary-color-2 {
   grid-column-gap: 8px;
-  background-color: #7f4221;
+  background-color: #082949;
   border-radius: 10px;
   justify-content: center;
   align-items: flex-start;
