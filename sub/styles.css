@@ -4822,6 +4822,7 @@ textarea.w-input, textarea.w-select {
   margin-top: 60px;
 }
 
+/*
 .icon {
   grid-row-gap: 10px;
   background-color: #fff;
@@ -4834,6 +4835,7 @@ textarea.w-input, textarea.w-select {
   display: flex;
   box-shadow: 8px 8px 36px rgba(0, 0, 0, .1);
 }
+  */
 
 .vectors-wrapper-20 {
   object-fit: cover;
@@ -6271,6 +6273,7 @@ textarea.w-input, textarea.w-select {
   background: #CD201F;
   color: #ffffff;
 }
+
 /* Social media icons */
 
 #w-node-fe1d7ef7-2452-2e59-7c21-2ddf9e20d6d2-f54b52f1 {
