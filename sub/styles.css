@@ -6242,21 +6242,21 @@ textarea.w-input, textarea.w-select {
 .wrapper .facebook:hover,
 .wrapper .facebook:hover .tooltip,
 .wrapper .facebook:hover .tooltip::before {
-  background: #1877F2;
+  background: #141414;
   color: #ffffff;
 }
 
 .wrapper .twitter:hover,
 .wrapper .twitter:hover .tooltip,
 .wrapper .twitter:hover .tooltip::before {
-  background: #1DA1F2;
+  background: #141414;
   color: #ffffff;
 }
 
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tooltip,
 .wrapper .instagram:hover .tooltip::before {
-  background: #E4405F;
+  background: #141414;
   color: #ffffff;
 }
 
@@ -6270,7 +6270,7 @@ textarea.w-input, textarea.w-select {
 .wrapper .youtube:hover,
 .wrapper .youtube:hover .tooltip,
 .wrapper .youtube:hover .tooltip::before {
-  background: #CD201F;
+  background: #141414;
   color: #ffffff;
 }
 
