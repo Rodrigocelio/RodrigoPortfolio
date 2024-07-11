@@ -16,24 +16,25 @@
         <button id="enviar" class="text-white bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded" onclick="sendMessage(event)">
           Enviar
         </button>
+        <button id="enviar e abrir" class="text-white bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded" onclick="openChat(); sendMessage(event)">
+          Enviar
+        </button>
       </div>
     </section>
 <!-- Div principal do chatbot -->
+<!-- Div principal do chatbot -->
 <div id="lyzr_chatbot" class="56b7ceba-1ec8-4b79-a057-5bd9e3a6f8b7">
   <!-- Botão fixo para abrir/fechar o chatbot -->
-  <button class="fixed right-8 bottom-4 w-10 h-10" onclick="toggleChat()">
-    <div class="rounded-full w-12 h-12 grid place-items-center bg-black p-2">
+  <button class="fixed right-8 bottom-4 w-10 h-10" onclick="openChat()">
+    <div class="rounded-full w-12 h-12 grid place-items-center p-2">
       <span id="unread"></span>
-      <!-- Ícone do botão -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 fill-white rounded-full">
-        <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 0 0-1.032-.211 50.89 50.89 0 0 0-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 0 0 2.433 3.984L7.28 21.53A.75.75 0 0 1 6 21v-4.03a48.527 48.527 0 0 1-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979Z" />
-        <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 0 0 1.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0 0 15.75 7.5Z" />
-      </svg>
+      <!-- Imagem do botão -->
+      <img src="assets/chatbot_open_icon_.svg" class="w-8 h-8 rounded-full" alt="Abrir Chatbot">
     </div>
   </button>
   
   <!-- Div do formulário de chat -->
-  <div id="myForm" class="flex flex-col bg-white h-[25rem] min-w-[18rem] max-w-[25rem] fixed right-8 bottom-16 rounded-md p-3 shadow-md border">
+  <div id="myForm" class="flex flex-col bg-white h-[25rem] min-w-[18rem] max-w-[25rem] fixed right-8 bottom-16 rounded-md p-3 shadow-md border hidden">
     <!-- Mensagem de erro caso o chatbot não seja encontrado -->
     <div id="chatbot_not_found" class="hidden flex-col items-center justify-center w-full h-full bg-white text-slate-400">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -48,8 +49,8 @@
     <div class="flex-none">
       <div id="header" class="py-2 flex justify-between items-center border-b border-slate-200">
         <p id="chatbot_name" class="text-slate-800 font-medium text-md"></p>
-        <!-- Botão para abrir/fechar o chat -->
-        <button onclick="toggleChat()">
+        <!-- Botão para fechar o chat -->
+        <button onclick="closeChat()">
           <img src="assets/chatbot_icon_x.svg" class="w-4 h-4" alt="Fechar Chatbot">
         </button>
       </div>
@@ -104,10 +105,16 @@
       }
     }
     
-    // Função para abrir/fechar o chat
-    function toggleChat() {
+    // Função para abrir o chat
+    function openChat() {
       const chatForm = document.getElementById('myForm');
-      chatForm.classList.toggle('hidden');
+      chatForm.classList.remove('hidden');
+    }
+    
+    // Função para fechar o chat
+    function closeChat() {
+      const chatForm = document.getElementById('myForm');
+      chatForm.classList.add('hidden');
     }
   </script>
           
