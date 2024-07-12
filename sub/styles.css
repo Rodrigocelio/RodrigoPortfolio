@@ -3275,6 +3275,12 @@ textarea.w-input, textarea.w-select {
   margin-right: auto;
 }
 
+.container-ft {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer-wrapper-two {
   justify-content: space-between;
   align-items: flex-start;
