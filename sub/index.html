@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
     <link href="styles.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/miniMAC/magic/master/dist/magic.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script type="text/javascript">
         ! function(o, c) {
             var n = c.documentElement,
@@ -72,7 +72,7 @@
                 </div>
                 <div class="w-layout-blockcontainer main-contaliner-links w-container">
                     <div class="nu-link-container">
-                        <div id="PRODUTOS" class="frame-service-title">
+                        <div data-aos="zoom-out" id="PRODUTOS" class="frame-service-title">
                             <div class="container-15">
                                 <div class="icon"><img src="https://cdn.prod.website-files.com/66619fac0681499bf54b5284/668b0a9555cfbdd7d0232194_Loja_virtual.png" loading="lazy" width="79.73575592041016" height="80" alt="" class="vectors-wrapper-20" /></div>
                                 <div class="container-text">
@@ -155,7 +155,7 @@
                 </div>
                 <div class="w-layout-blockcontainer main-contaliner-links w-container">
                     <div class="nu-link-container">
-                        <div id="SERVICOS" class="frame-service-title">
+                        <div data-aos="zoom-out" id="SERVICOS" class="frame-service-title">
                             <div class="container-15">
                                 <div class="icon"><img src="https://cdn.prod.website-files.com/66619fac0681499bf54b5284/668b0b6338128993b3acd03d_Assistencia.png" loading="lazy" width="79.73575592041016" height="80" alt="" class="vectors-wrapper-20" /></div>
                                 <div class="container-text">
@@ -200,7 +200,7 @@
                 <!-- redes sociais -->
                 <div class="w-layout-blockcontainer main-contaliner-links w-container">
                     <div class="nu-link-container">
-                        <div id="REDESOCIAIS" class="frame-service-title">
+                        <div data-aos="zoom-out" id="REDESOCIAIS" class="frame-service-title">
                             <div class="container-15">
                                 <div class="icon"><img src="assets/canais_icon.png" loading="lazy" width="79.73575592041016" height="80" alt="" class="vectors-wrapper-20" /></div>
                                 <div class="container-text">
@@ -525,6 +525,10 @@
         $(document).ready(function() {
             $(".w-webflow-badge").removeClass("w-webflow-badge").empty();
         });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
 </body>
 
