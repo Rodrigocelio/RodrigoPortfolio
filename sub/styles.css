@@ -4430,13 +4430,13 @@ textarea.w-input, textarea.w-select {
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 26px;
-  background-color: #554c54;
+  background-color: #000;
   color: #fff;
   font-size: 1.5em;
   font-weight: normal;
   line-height: normal;
   text-align: center;
-  border: 1px solid #606060;
+  border: 1px solid #d9d9d9;
   border-radius: 8px;
   justify-content: center;
   padding: 15px 0 15px 0;
@@ -5917,7 +5917,7 @@ textarea.w-input, textarea.w-select {
 
   .main-contaliner-links {
     margin-top: 10px;
-    padding-top: 60px;
+    padding-top: 10px;
     padding-bottom: 60px;
   }
 
