@@ -30,6 +30,7 @@ audio:not([controls]) {
 
 a {
   background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 
 a:active, a:hover {
@@ -79,6 +80,11 @@ sub {
 
 img {
   border: 0;
+}
+
+image-thumb {
+  border-radius: 20px;
+  overflow: visible;
 }
 
 svg:not(:root) {
@@ -3720,7 +3726,7 @@ textarea.w-input, textarea.w-select {
 .container-btn {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  flex-flow: column;
+  flex-flow: row;
   justify-content: center;
   width: 600px;
   max-width: 970px;
@@ -4419,6 +4425,30 @@ textarea.w-input, textarea.w-select {
   box-shadow: -13px -13px 20px -6px #fff, 14px 14px 36px -10px rgba(0, 0, 0, .4);
 }
 
+.cta-sdw {
+  width: 250px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 26px;
+  background-color: #554c54;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: normal;
+  line-height: normal;
+  text-align: center;
+  border: 1px solid #606060;
+  border-radius: 8px;
+  justify-content: center;
+  padding: 15px 0 15px 0;
+  text-decoration: none;
+  transition: box-shadow .5s cubic-bezier(.68, -.55, .265, 1.55);
+  box-shadow: -4px -4px 9px -3px #fff, 11px 11px 9px -15px rgba(0, 0, 0, .82);
+}
+
+.cta-sdw:hover {
+  box-shadow: -13px -13px 20px -6px #fff, 14px 14px 36px -10px rgba(0, 0, 0, .4);
+}
+
 .text-block-14 {
   text-decoration: none;
 }
@@ -4916,7 +4946,7 @@ textarea.w-input, textarea.w-select {
 
   .container-btn {
     object-fit: fill;
-    flex-flow: column;
+    flex-flow: row;
     width: 600px;
     padding-left: 0;
     padding-right: 0;
