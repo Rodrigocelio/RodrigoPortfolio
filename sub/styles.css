@@ -4573,6 +4573,8 @@ textarea.w-input, textarea.w-select {
   font-weight: 700;
   line-height: 22px;
   text-decoration: none;
+  word-break: keep-all;
+  white-space: nowrap;
 }
 
 .vectors-wrapper-17 {
