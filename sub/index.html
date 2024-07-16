@@ -145,7 +145,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container-btn"><a id="btn-servicos" class="cta-sdw w-inline-block" onclick="openChat(); sendMessage(event)">Mais informações </a></div>
+                    <div class="container-btn"><a id="btn-servicos" class="cta-sdw w-inline-block" onclick="openChat(); sendProductMessage(event)">Mais informações </a></div>
                 </div>
                 <div class="w-layout-blockcontainer main-contaliner-links w-container">
                     <div class="nu-link-container">
@@ -407,6 +407,15 @@
         // Envia a mensagem "bom dia, tenho uma duvida"
         const editor = document.getElementById('editor');
         editor.value = 'bom dia, tenho uma duvida';
+        // Chama a função onSend passando o evento
+        onSend(event);
+      }
+
+      // Função para enviar uma mensagem pré-definida
+      function sendProductMessage(event) {
+        // Envia a mensagem "bom dia, tenho uma duvida"
+        const editor = document.getElementById('editor');
+        editor.value = 'bom dia, Quero saber mais sobre os Smartphones';
         // Chama a função onSend passando o evento
         onSend(event);
       }

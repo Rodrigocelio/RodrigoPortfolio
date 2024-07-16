@@ -13,11 +13,11 @@
             <h1>Chatbot Sub Imports</h1>
             
         </div>
-        <button id="enviar" class="text-white bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded" onclick="sendMessage(event)">
-          Enviar
+        <button id="enviar" class="text-white bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded" onclick="openChat(); sendProdMessage(event)">
+          Produtos
         </button>
-        <button id="enviar e abrir" class="text-white bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded" onclick="openChat(); sendMessage(event)">
-          Enviar
+        <button id="enviar e abrir" class="text-white bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded" onclick="openChat(); sendServMessage(event)">
+          Serviços
         </button>
       </div>
     </section>
@@ -81,10 +81,19 @@
   <!-- Scripts JavaScript -->
   <script>
     // Função para enviar uma mensagem pré-definida
-    function sendMessage(event) {
+    function sendProdMessage(event) {
       // Envia a mensagem "bom dia, tenho uma duvida"
       const editor = document.getElementById('editor');
-      editor.value = 'bom dia, tenho uma duvida';
+      editor.value = 'bom dia, Gostaria de saber mais sobre os produtos';
+      // Chama a função onSend passando o evento
+      onSend(event);
+    }
+
+    // Função para enviar uma mensagem pré-definida
+    function sendServMessage(event) {
+      // Envia a mensagem "bom dia, tenho uma duvida"
+      const editor = document.getElementById('editor');
+      editor.value = 'bom dia, Quais serviços voces ofecem?';
       // Chama a função onSend passando o evento
       onSend(event);
     }
