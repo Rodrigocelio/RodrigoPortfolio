@@ -11,11 +11,11 @@
   <!-- Links -->
   <div style="display: flex; flex-wrap: wrap; justify-content: center;">
     <a href="#" class="cta-sdw" id="a" onclick="openChat()">Fones</a>
-    <a href="#" class="cta-sdw" id="link_peliculas" onclick="openChat()">Películas</a>
-    <a href="#" class="cta-sdw" id="link_capas" onclick="openChat">Capas</a>
-    <a href="#" class="cta-sdw" id="link_carregadores" onclick="openChat">Carregadores</a>
-    <a href="#" class="cta-sdw" id="link_cabos" onclick="openChat">Cabos</a>
-    <a href="#" class="cta-sdw" id="link_baterias" onclick="openChat">Baterias</a>
+    <a href="#" class="cta-sdw" id="b" onclick="openChat()">Películas</a>
+    <a href="#" class="cta-sdw" id="c" onclick="openChat">Capas</a>
+    <a href="#" class="cta-sdw" id="d" onclick="openChat">Carregadores</a>
+    <a href="#" class="cta-sdw" id="e" onclick="openChat">Cabos</a>
+    <a href="#" class="cta-sdw" id="f" onclick="openChat">Baterias</a>
   </div>
 
   <!-- Widget -->
@@ -113,19 +113,19 @@
 
       // Variáveis para os links
       const a = document.getElementById('a');
-      const linkPeliculas = document.getElementById('link_peliculas');
-      const linkCapas = document.getElementById('link_capas');
-      const linkCarregadores = document.getElementById('link_carregadores');
-      const linkCabos = document.getElementById('link_cabos');
-      const linkBaterias = document.getElementById('link_baterias');
+      const b = document.getElementById('b');
+      const c = document.getElementById('c');
+      const d = document.getElementById('d');
+      const e = document.getElementById('e');
+      const f = document.getElementById('f');
 
       // Adiciona eventos de clique aos links para enviar mensagens com o assunto específico
       a.addEventListener('click', () => sendMessage('fones'));
-      linkPeliculas.addEventListener('click', () => sendMessage('películas'));
-      linkCapas.addEventListener('click', () => sendMessage('capas'));
-      linkCarregadores.addEventListener('click', () => sendMessage('carregadores'));
-      linkCabos.addEventListener('click', () => sendMessage('cabos'));
-      linkBaterias.addEventListener('click', () => sendMessage('baterias'));
+      b.addEventListener('click', () => sendMessage('películas'));
+      c.addEventListener('click', () => sendMessage('capas'));
+      d.addEventListener('click', () => sendMessage('carregadores'));
+      e.addEventListener('click', () => sendMessage('cabos'));
+      f.addEventListener('click', () => sendMessage('baterias'));
     </script>
     <style>
        /* Hide scrollbar for Chrome, Safari and Opera */
