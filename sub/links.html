@@ -10,7 +10,7 @@
 <body>
   <!-- Links -->
   <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-    <a href="#" class="cta-sdw" id="link_fones" onclick="openChat()">Fones</a>
+    <a href="#" class="cta-sdw" id="a" onclick="openChat()">Fones</a>
     <a href="#" class="cta-sdw" id="link_peliculas" onclick="openChat()">Películas</a>
     <a href="#" class="cta-sdw" id="link_capas" onclick="openChat">Capas</a>
     <a href="#" class="cta-sdw" id="link_carregadores" onclick="openChat">Carregadores</a>
@@ -112,7 +112,7 @@
       }
 
       // Variáveis para os links
-      const linkFones = document.getElementById('link_fones');
+      const a = document.getElementById('a');
       const linkPeliculas = document.getElementById('link_peliculas');
       const linkCapas = document.getElementById('link_capas');
       const linkCarregadores = document.getElementById('link_carregadores');
@@ -120,7 +120,7 @@
       const linkBaterias = document.getElementById('link_baterias');
 
       // Adiciona eventos de clique aos links para enviar mensagens com o assunto específico
-      linkFones.addEventListener('click', () => sendMessage('fones'));
+      a.addEventListener('click', () => sendMessage('fones'));
       linkPeliculas.addEventListener('click', () => sendMessage('películas'));
       linkCapas.addEventListener('click', () => sendMessage('capas'));
       linkCarregadores.addEventListener('click', () => sendMessage('carregadores'));
