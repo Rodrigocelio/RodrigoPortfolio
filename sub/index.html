@@ -181,17 +181,17 @@
                                 </div>
                                 <div class="itens_container">
                                     <div class="frame-services">
-                                        <div class="frame-lcd">
+                                        <a id="m" onclick="openChat()"><div class="frame-lcd">
                                             <div class="div-block-ico"><img src="https://cdn.prod.website-files.com/66619fac0681499bf54b5284/66883e7712f0f31364f3c18d_Vectors-Wrapper.svg" loading="lazy" width="28.125" height="50.00048828125" alt="" class="vectors-wrapper-19" /></div>
                                             <div class="heading-4-lcd-screen">Reparo de Tela</div>
-                                        </div>
-                                        <div class="frame-lcd"><img src="https://cdn.prod.website-files.com/66619fac0681499bf54b5284/66883e774d65bd157e55a493_laptop-battery-replacement.png.png" loading="lazy" width="59" height="58.720001220703125" alt="" class="laptop-battery-replacement-png" />
+                                        </div></a>
+                                        <a id="n" onclick="openChat()"><div class="frame-lcd"><img src="https://cdn.prod.website-files.com/66619fac0681499bf54b5284/66883e774d65bd157e55a493_laptop-battery-replacement.png.png" loading="lazy" width="59" height="58.720001220703125" alt="" class="laptop-battery-replacement-png" />
                                             <div class="heading-4-lcd-screen">Troca de Bateria</div>
-                                        </div>
-                                        <div class="frame-lcd">
+                                        </div></a>
+                                        <a id="p" onclick="openChat()"><div class="frame-lcd">
                                             <div class="mask-group"><img src="https://cdn.prod.website-files.com/66619fac0681499bf54b5284/66883e78628d502116104fde_tablet-charging.png.png" loading="lazy" width="60.286102294921875" height="58.720001220703125" alt="" class="tablet-charging-png" /></div>
                                             <div class="heading-4-charging-port">Outros Reparos</div>
-                                        </div>
+                                        </div></a>
                                     </div>
                                 </div>
                             </div>
@@ -358,7 +358,7 @@
         </div>
     </div>
     <!-- Widget code -->
-<div id="lyzr_chatbot" class="56b7ceba-1ec8-4b79-a057-5bd9e3a6f8b7">
+<div id="lyzr_chatbot" class="c35de91d-3445-4466-8e8f-44640208b94b">
     <button class="fixed right-8 bottom-4 w-10 h-10" onclick="openChat()">
       <div class="rounded-full w-12 h-12 grid place-items-center p-2">
         <span id="unread"></span>
@@ -402,6 +402,10 @@
       </div>
       <style>
         
+        .flex {
+            gap: 16px;
+        }
+
         .center-box {
             background-color: #0099ff;
             display: flex;
@@ -468,7 +472,7 @@
             function sendMessage(subject) {
               // Envia a mensagem "bom dia, tenho uma duvida sobre {subject}"
               const editor = document.getElementById('editor');
-              editor.value = `Olá, quais os modelos de ${subject} disponíveis?`;
+              editor.value = `Olá, preciso de informações sobre ${subject} .`;
               // Chama a função onSend passando o evento
               onSend({ key: 'Enter' });
             }
@@ -512,6 +516,9 @@
             const i = document.getElementById('i');
             const j = document.getElementById('j');
             const l = document.getElementById('l');
+            const m = document.getElementById('m');
+            const n = document.getElementById('n');
+            const o = document.getElementById('p');
       
             // Adiciona eventos de clique aos links para enviar mensagens com o assunto específico
             a.addEventListener('click', () => sendMessage('iPhones'));
@@ -524,6 +531,9 @@
             i.addEventListener('click', () => sendMessage('Capas de Celulares'));
             j.addEventListener('click', () => sendMessage('Carregadores'));
             l.addEventListener('click', () => sendMessage('Cabos de Celulares'));
+            m.addEventListener('click', () => sendMessage('Troca de Tela'));
+            n.addEventListener('click', () => sendMessage('Troca de Bateria'));
+            p.addEventListener('click', () => sendMessage('Outros Reparos'));
         
 
           </script>
