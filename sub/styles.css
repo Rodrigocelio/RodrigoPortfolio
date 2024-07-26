@@ -229,7 +229,7 @@ html {
 
 body {
   color: #333;
-  background-color: #fff;
+  background-color: darkkhaki;
   min-height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
@@ -4429,8 +4429,8 @@ textarea.w-input, textarea.w-select {
 
 .cta-sdw {
   width: 250px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 1%;
+  margin-right: 1%;
   margin-top: 26px;
   background-color: #000;
   color: #fff;

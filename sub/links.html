@@ -4,65 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chatbot Example</title>
-  <link rel="stylesheet" href="styles.css">
-  
 </head>
 <body>
   <!-- Links -->
-  <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-    <a href="#" class="cta-sdw" id="a" onclick="openChat()">Fones</a>
-    <a href="#" class="cta-sdw" id="b" onclick="openChat()">Películas</a>
-    <a href="#" class="cta-sdw" id="c" onclick="openChat">Capas</a>
-    <a href="#" class="cta-sdw" id="d" onclick="openChat">Carregadores</a>
-    <a href="#" class="cta-sdw" id="e" onclick="openChat">Cabos</a>
-    <a href="#" class="cta-sdw" id="f" onclick="openChat">Baterias</a>
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <div class="title-wrapper">
+      <h1>Meu chatbot Next.js</h1>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <a href="#" class="cta-sdw" id="a" onclick="openChat()">iPhones</a>
+      <a href="#" class="cta-sdw" id="b" onclick="openChat()">iPads</a>
+      <a href="#" class="cta-sdw" id="c" onclick="openChat()">Xiaomi</a>
+      <a href="#" class="cta-sdw" id="d" onclick="openChat()">Smartwatchs</a>
+      <a href="#" class="cta-sdw" id="e" onclick="openChat()">JBL</a>
+      <a href="#" class="cta-sdw" id="f" onclick="openChat()">Fones</a>
+    </div>
   </div>
 
-  <!-- Widget -->
-  <div id="lyzr_chatbot" class="56b7ceba-1ec8-4b79-a057-5bd9e3a6f8b7">
-    <!-- Botão fixo para abrir o chatbot -->
+  <!-- Chatbot Widget -->
+  <div id="lyzr_chatbot" class="c35de91d-3445-4466-8e8f-44640208b94b">
     <button class="fixed right-8 bottom-4 w-10 h-10" onclick="openChat()">
       <div class="rounded-full w-12 h-12 grid place-items-center p-2">
         <span id="unread"></span>
-        <!-- Imagem do botão -->
         <img src="assets/chatbot_open_icon_.svg" class="w-8 h-8 rounded-full" alt="Abrir Chatbot">
       </div>
     </button>
 
-    <!-- Div do formulário de chat -->
     <div id="myForm" class="flex flex-col bg-white h-[25rem] min-w-[18rem] max-w-[25rem] fixed right-8 bottom-16 rounded-md p-3 shadow-md border hidden">
-      <!-- Mensagem de erro caso o chatbot não seja encontrado -->
       <div id="chatbot_not_found" class="hidden flex-col items-center justify-center w-full h-full bg-white text-slate-400">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
         </svg>
         <p class="mt-2 text-lg">No Chatbot found</p>
       </div>
-
-      <!-- Cabeçalho do chat -->
       <div class="flex-none">
         <div id="header" class="py-2 flex justify-between items-center border-b border-slate-200">
           <p id="chatbot_name" class="text-slate-800 font-medium text-md"></p>
-          <!-- Botão para fechar o chat -->
           <button onclick="closeChat()">
-            <img src="/assets/chatbot_icon_x.svg" class="w-4 h-4" alt="Fechar Chatbot">
+            <img src="assets/chatbot_icon_x.svg" class="w-4 h-4" alt="Fechar Chatbot">
           </button>
         </div>
       </div>
-
-      <!-- Corpo do chat -->
       <div id="body" class="grow py-2 max-h-4/6 overflow-y-auto scroll-smooth no-scrollbar">
-        <!-- Lista de mensagens do chat -->
         <ul id="chat-messages" class="list-none"></ul>
         <div id="chat-bottom"></div>
       </div>
-
-      <!-- Rodapé do chat -->
       <div class="flex-none">
         <div id="footer" class="p-2 flex justify-between items-center rounded-lg bg-slate-200">
-          <!-- Área de texto para escrever mensagens -->
-          <textarea rows="1" id='editor' placeholder="Write query here and press Enter" onkeyup="onSend(event)" class="w-[90%] rounded-md placeholder:text-sm p-1 border border-slate-100"></textarea>
-          <!-- Botão para enviar a mensagem -->
+          <textarea rows="1" id='editor' placeholder="Escreva e pressione Enter" onkeyup="onSend(event)" class="w-[90%] rounded-md placeholder:text-sm p-1 border border-slate-100"></textarea>
           <button onclick="onSend(event)">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 -rotate-45 text-slate-500">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
@@ -72,76 +61,63 @@
       </div>
     </div>
 
-    <!-- Scripts JavaScript -->
-    <script>
-      // Função para enviar uma mensagem com o assunto específico
-      function sendMessage(subject) {
-        // Envia a mensagem "bom dia, tenho uma duvida sobre {subject}"
-        const editor = document.getElementById('editor');
-        editor.value = `bom dia, tenho uma duvida sobre ${subject}`;
-        // Chama a função onSend passando o evento
-        onSend({ key: 'Enter' });
-      }
-
-      // Função para enviar a mensagem ao pressionar Enter ou clicar no botão
-      function onSend(event) {
-        if (event.key === 'Enter' || event.type === 'click') {
-          const message = document.getElementById('editor').value;
-          if (message.trim() !== '') {
-            // Adiciona a mensagem ao chat
-            const messageList = document.getElementById('chat-messages');
-            const newMessage = document.createElement('li');
-            newMessage.textContent = message;
-            messageList.appendChild(newMessage);
-            // Limpa o editor
-            document.getElementById('editor').value = '';
-          }
-        }
-      }
-
-      // Função para abrir o chat
-      function openChat() {
-        const chatForm = document.getElementById('myForm');
-        chatForm.classList.remove('hidden');
-      }
-
-      // Função para fechar o chat
-      function closeChat() {
-        const chatForm = document.getElementById('myForm');
-        chatForm.classList.add('hidden');
-      }
-
-      // Variáveis para os links
-      const a = document.getElementById('a');
-      const b = document.getElementById('b');
-      const c = document.getElementById('c');
-      const d = document.getElementById('d');
-      const e = document.getElementById('e');
-      const f = document.getElementById('f');
-
-      // Adiciona eventos de clique aos links para enviar mensagens com o assunto específico
-      a.addEventListener('click', () => sendMessage('fones'));
-      b.addEventListener('click', () => sendMessage('películas'));
-      c.addEventListener('click', () => sendMessage('capas'));
-      d.addEventListener('click', () => sendMessage('carregadores'));
-      e.addEventListener('click', () => sendMessage('cabos'));
-      f.addEventListener('click', () => sendMessage('baterias'));
-    </script>
     <style>
-       /* Hide scrollbar for Chrome, Safari and Opera */
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
+      body {
+        color: #333;
+        background-color: #d9d9d9;
+        min-height: 100%;
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        line-height: 20px;
       }
-      /**
-      * ==============================================
-      * Dot Typing
-      * ==============================================
-      */
+      h1 {
+        font-size: 62px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: -3.8px;
+      }    
+      .title-wrapper {
+        display: block;
+        text-align: center; 
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      .cta-sdw {
+        width: 250px;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 26px;
+        background-color: #d9d9d9;
+        color: #000;
+        font-size: 1.5em;
+        font-weight: normal;
+        line-height: normal;
+        text-align: center;
+        border: 1px solid #d9d9d9;
+        border-radius: 8px;
+        justify-content: center;
+        padding: 15px 0 15px 0;
+        text-decoration: none;
+        transition: box-shadow .5s cubic-bezier(.68, -.55, .265, 1.55);
+        box-shadow: -4px -4px 9px -3px #fff, 11px 11px 9px -15px rgba(0, 0, 0, .82);
+      }
+      .cta-sdw:hover {
+        box-shadow: -13px -13px 20px -6px #fff, 14px 14px 36px -10px rgba(0, 0, 0, .4);
+      }
+      .flex-shrink-0 {
+        padding: 0 16px 0 0;
+      }
+      .mr-1 {
+        padding: 0 16px 0 0;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
       .dot-typing {
         position: relative;
         left: -9999px;
@@ -177,10 +153,54 @@
         }
       }
     </style>
-    
-    <script type="module" src="https://cdn.skypack.dev/@vanillawc/wc-markdown"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
-    <script src="https://lyzr-chatbot-assets.s3.amazonaws.com/script.js"></script>
   </div>
+
+  <!-- JavaScript Functions -->
+  <script>
+    // Function to send a message with a specific subject
+    function sendMessage(subject) {
+      const editor = document.getElementById('editor');
+      editor.value = `Olá, preciso de informações sobre ${subject}.`;
+      onSend({ key: 'Enter' });
+    }
+
+    // Function to send the message when pressing Enter or clicking the button
+    function onSend(event) {
+      if (event.key === 'Enter' || event.type === 'click') {
+        const message = document.getElementById('editor').value;
+        if (message.trim() !== '') {
+          const messageList = document.getElementById('chat-messages');
+          const newMessage = document.createElement('li');
+          newMessage.textContent = message;
+          messageList.appendChild(newMessage);
+          document.getElementById('editor').value = '';
+        }
+      }
+    }
+
+    // Function to open the chat window
+    function openChat() {
+      const chatForm = document.getElementById('myForm');
+      chatForm.classList.remove('hidden');
+    }
+
+    // Function to close the chat window
+    function closeChat() {
+      const chatForm = document.getElementById('myForm');
+      chatForm.classList.add('hidden');
+    }
+
+    // Add click events to the links
+    document.getElementById('a').addEventListener('click', () => sendMessage('iPhones'));
+    document.getElementById('b').addEventListener('click', () => sendMessage('iPads'));
+    document.getElementById('c').addEventListener('click', () => sendMessage('Xiaomi'));
+    document.getElementById('d').addEventListener('click', () => sendMessage('Smartwatchs'));
+    document.getElementById('e').addEventListener('click', () => sendMessage('JBL'));
+    document.getElementById('f').addEventListener('click', () => sendMessage('fones'));
+  </script>
+
+  <script type="module" src="https://cdn.skypack.dev/@vanillawc/wc-markdown"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  <script src="https://lyzr-chatbot-assets.s3.amazonaws.com/script.js"></script>
 </body>
 </html>
