@@ -5650,6 +5650,13 @@ textarea.w-input, textarea.w-select {
     margin-right: 0;
   }
 
+  .background-3-form {
+    flex-flow: column;
+    min-width: 720px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .link-3 {
     justify-content: center;
     align-items: center;
@@ -5871,6 +5878,10 @@ textarea.w-input, textarea.w-select {
   }
 
   .background-3 {
+    min-width: 540px;
+  }
+
+  .background-3-form {
     min-width: 540px;
   }
 
@@ -6225,6 +6236,13 @@ textarea.w-input, textarea.w-select {
   }
 
   .background-3 {
+    width: 100%;
+    min-width: 350px;
+    max-width: none;
+    height: auto;
+  }
+
+  .background-3-form {
     width: 100%;
     min-width: 350px;
     max-width: none;
