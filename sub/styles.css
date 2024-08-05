@@ -4989,7 +4989,7 @@ textarea.w-input, textarea.w-select {
   
   width: 100%;
   height: 80px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #fff;
   position: absolute;
   margin-top: 600px;
 
@@ -6332,6 +6332,16 @@ textarea.w-input, textarea.w-select {
 
   .logo-h1 {
     height: 4em;
+  }
+
+  .iframe-badge {
+  
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    position: absolute;
+    margin-top: 730px;
+  
   }
 }
 
