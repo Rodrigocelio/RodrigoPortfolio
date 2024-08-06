@@ -5017,7 +5017,16 @@ textarea.w-input, textarea.w-select {
 
 .container-17 {
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  display: flex;
+  overflow: hidden;
+  height: 42vw;
+}
+
+.container-phones {
+  height: 42vw;
+  justify-content: center;
+  align-items: flex-start;
   display: flex;
   overflow: hidden;
 }
